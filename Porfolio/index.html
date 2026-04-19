@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>G — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a href="#" class="logo">Giang<span>*</span></a>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation"
+        ></button>
+        <nav class="nav-links" id="navLinks">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">Hi, I'm G</p>
+          <h1>
+            Product Designer &amp;
+            <span class="accent">Front-end Developer</span>
+          </h1>
+          <p class="lead">
+            I craft clean, modern interfaces and bring them to life with code.
+            Currently building delightful digital experiences from Lisbon.
+          </p>
+          <div class="cta-group">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="avatar">G</div>
+          <div class="blob"></div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="section">
+      <div class="container grid-2">
+        <div>
+          <p class="section-tag">About</p>
+          <h2>Designing with empathy, building with care.</h2>
+          <p class="muted">
+            I've spent the last 6+ years helping startups and agencies ship
+            products that people love. From research to pixels to production
+            code, I enjoy every step of the process.
+          </p>
+          <ul class="stats">
+            <li><strong>60+</strong><span>Projects</span></li>
+            <li><strong>30+</strong><span>Clients</span></li>
+            <li><strong>6</strong><span>Years exp.</span></li>
+          </ul>
+        </div>
+        <div class="skills">
+          <h3>Skills</h3>
+          <div class="chips">
+            <span>Figma</span><span>HTML</span><span>CSS</span>
+            <span>JavaScript</span><span>React</span><span>Tailwind</span>
+            <span>UI/UX</span><span>Webflow</span><span>Accessibility</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <p class="section-tag">Projects</p>
+        <h2>Selected work</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-thumb t1"></div>
+            <h3>Nimbus Dashboard</h3>
+            <p>Analytics platform redesign — increased activation by 32%.</p>
+            <a href="#" class="link">View case study →</a>
+          </article>
+          <article class="project-card">
+            <div class="project-thumb t2"></div>
+            <h3>Pace Running App</h3>
+            <p>Mobile experience for runners with social challenges.</p>
+            <a href="#" class="link">View case study →</a>
+          </article>
+          <article class="project-card">
+            <div class="project-thumb t3"></div>
+            <h3>Lume E-commerce</h3>
+            <p>Storefront for a sustainable lighting brand built in Shopify.</p>
+            <a href="#" class="link">View case study →</a>
+          </article>
+          <article class="project-card">
+            <div class="project-thumb t4"></div>
+            <h3>Orbit Design System</h3>
+            <p>Component library powering 5 internal products.</p>
+            <a href="#" class="link">View case study →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="services" class="section">
+      <div class="container">
+        <p class="section-tag">Services</p>
+        <h2>What I can do for you</h2>
+        <div class="services-grid">
+          <div class="service">
+            <div class="icon">✨</div>
+            <h3>UI / UX Design</h3>
+            <p>End-to-end product design, from wireframes to polished UI.</p>
+          </div>
+          <div class="service">
+            <div class="icon">💻</div>
+            <h3>Front-end Development</h3>
+            <p>Responsive, accessible interfaces with modern tooling.</p>
+          </div>
+          <div class="service">
+            <div class="icon">🧩</div>
+            <h3>Design Systems</h3>
+            <p>
+              Scalable component libraries and tokens for consistent brands.
+            </p>
+          </div>
+          <div class="service">
+            <div class="icon">🚀</div>
+            <h3>Landing Pages</h3>
+            <p>High-converting marketing sites, shipped quickly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="section section-alt">
+      <div class="container contact-inner">
+        <div>
+          <p class="section-tag">Contact</p>
+          <h2>Let's build something great.</h2>
+          <p class="muted">
+            Have a project in mind? Send a message and I'll get back within 24
+            hours.
+          </p>
+          <p class="contact-email">hello@alexcarter.design</p>
+        </div>
+        <form
+          class="contact-form"
+          onsubmit="
+            event.preventDefault();
+            alert('Thanks! This is a demo form.');
+          "
+        >
+          <label
+            >Name<input type="text" required placeholder="Your name"
+          /></label>
+          <label
+            >Email<input type="email" required placeholder="you@example.com"
+          /></label>
+          <label
+            >Message<textarea
+              rows="4"
+              required
+              placeholder="Tell me about your project..."
+            ></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© 2026 Alex Carter. All rights reserved.</p>
+        <div class="socials">
+          <a href="#">Twitter</a>
+          <a href="#">Dribbble</a>
+          <a href="#">GitHub</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.getElementById("navToggle");
+      const links = document.getElementById("navLinks");
+      toggle.addEventListener("click", () => links.classList.toggle("open"));
+      links
+        .querySelectorAll("a")
+        .forEach((a) =>
+          a.addEventListener("click", () => links.classList.remove("open")),
+        );
+    </script>
+  </body>
+</html>
