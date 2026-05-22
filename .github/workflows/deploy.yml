@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - "MusicWeb/**" # Chỉ chạy tự động khi có thay đổi trong thư mục MusicWeb
 
 permissions:
   contents: write
@@ -14,7 +16,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: MusicWeb
+        working-directory: MusicWeb # Chỉ định chạy lệnh bên trong thư mục MusicWeb
 
     steps:
       - name: Checkout source
@@ -23,16 +25,18 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 20 # Hoặc phiên bản Node bạn đang dùng ở máy
+          cache: "npm"
+          cache-dependency-path: MusicWeb/package-lock.json
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: npm install
 
-      - name: Build project
+      - name: Build Project
         run: npm run build
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./MusicWeb/dist
+          folder: MusicWeb/dist # Thư mục sản phẩm sau khi build của Vite
+          branch: gh-pages
